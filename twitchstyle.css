@@ -1,0 +1,69 @@
+body {
+
+	padding-top: 50px;
+}
+
+
+h1 {
+
+	color: orange;
+	text-align: center;
+	padding-bottom: 50px;
+	font-weight: 700;
+
+}
+
+h2 {
+	padding-bottom: 10px;
+}
+
+.users {
+
+max-height: 200px;
+
+
+}
+
+.username {
+	min-height: 30px;
+	border: 1px solid black;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	padding: 3px;
+	background-color: #BDA9A9;
+
+
+}
+
+.title {
+
+	min-height: 30px;
+	border: 1px solid black;
+	background-color: #BDA9A9;
+	margin: 2%;
+}
+
+img {
+
+	height: 50px;
+	width:  50px;
+	display: inline-block;
+	border: 2px solid white;
+	border-radius: 8px;
+
+
+
+}
+
+.userinput {
+
+	padding-left: 30%;
+	display: inline;
+	font-weight: 600;
+
+
+}
+
+.logo {
+
+}
