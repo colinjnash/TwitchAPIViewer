@@ -3,11 +3,18 @@ $(document).ready(function() {
     "use strict";
 
     var chanList = ["ESL_SC2", "OgamingSC2", "luminosity", "giantwaffle", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb"];
-    var online = [];
-    var offline = [];
+    
+    //variables below removed from code not able to function in ASYNC environment.
+    //(Two AJAX calls, in line after each other.)
+
+
+    // var online = [];
+    // var offline = [];
 
 
     function chanInfo() {
+
+        //Use chanList and iterate through users in array.
 
         chanList.forEach(function(name) {
 
@@ -22,6 +29,7 @@ $(document).ready(function() {
                 })
                 .success(function(data) {
 
+                    //Check and assign online or offline status.
 
                     if (data.stream === null) {
                         status = "Offline";
@@ -32,6 +40,7 @@ $(document).ready(function() {
 
                     else status = "online";
 
+                    //Run another AJAX request to receive user data. AJAX request is wrapped in success function in order to avoid deferrments.
                        $.ajax({
                     url: 'https://wind-bow.gomix.me/twitch-api/channels/' + name,
                     type: 'GET',
@@ -41,9 +50,17 @@ $(document).ready(function() {
                 })
                 .success(function(data) {
                     console.log("success");
+
+                    //Check and Replace if there is no logo.
                     if (data.logo === null) {
                         data.logo = "http://www.freeiconspng.com/uploads/no-image-icon-32.png";
 
+                        //Check and Replace status if null.
+
+                    }
+                    if (data.status === null) {
+
+                        data.status = "Nothing to say.";
                     }
 
 
