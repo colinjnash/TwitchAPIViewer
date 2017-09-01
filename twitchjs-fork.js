@@ -77,4 +77,28 @@ else   $('.offline').append(
 
     chanInfo();
 
+    $('#btnonline').on('click',function(event) {
+        $('.online').toggle("fast", function(){
+
+        });
+        event.preventDefault();
+          });
+    $('#btnoffline').on('click',function(event) {
+        $('.offline').toggle("fast", function(){
+
+        });
+        event.preventDefault();
+
+          });
+    $('#btnall').on('click',function(event) {
+        $('.online').show("fast", function(){
+
+        });
+        $('.offline').show("fast", function(){
+
+        });
+
+        event.preventDefault();
+        /* Act on the event */
+
 });
